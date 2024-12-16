@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Home | LapCraft</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -49,8 +49,8 @@ if (isset($_SESSION['gcCart'])){
           <div class="col-sm-6">
             <div class="contactinfo">
               <ul class="nav nav-pills" >
-                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> Nowdemyofficial@gmail.com</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>headOffice: 01-123456</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> infoLapCraft@gmail.com</a></li>
               </ul>
             </div>
           </div>
@@ -60,8 +60,7 @@ if (isset($_SESSION['gcCart'])){
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
               </ul>
             </div>
           </div>
@@ -74,7 +73,7 @@ if (isset($_SESSION['gcCart'])){
         <div class="row">
           <div class="col-md-4 clearfix">
             <div class="logo pull-left">
-              <a href="<?php echo web_root?>"><img src="images/home/logos.png" alt="" /></a>
+              <a href="<?php echo web_root?>"><img src="images/home/logo.jpg" alt="" height="50px"/></a>
             </div> 
           </div>
           <div class="col-md-8 clearfix">
@@ -157,8 +156,8 @@ if (isset($_SESSION['gcCart'])){
         <div class="row">
           <div class="col-sm-2">
             <div class="companyinfo">
-              <h2><span>Smart</span>-shop</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+            <h2><span>Lapcraft</span></h2>
+            <p style="color:#4d4a4a;">Selling only the best things online && Your trusted e-commerce platform</p>
             </div>
           </div>
           <div class="col-sm-7">
@@ -167,7 +166,7 @@ if (isset($_SESSION['gcCart'])){
           <div class="col-sm-3">
             <div class="address">
               <img src="images/home/map.png" alt="" />
-              <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+              <p style="color:#4d4a4a;"> Kathmandu, Nepal</p>
             </div>
           </div>
         </div>
@@ -176,23 +175,23 @@ if (isset($_SESSION['gcCart'])){
     
     <div class="footer-widget">
       <div class="container">
-        <p>You can modify this section using your own personal information</p>
+   
         <div class="row">
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Service</h2>
+            <h2 style="color:#2a2e4b;">Service</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Online Help</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Change Location</a></li>
-                <li><a href="#">FAQ’s</a></li>
+              <li><a href="#" style="color:#4d4a4a;">Online Help</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Contact Us</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Order Status</a></li>
+                
+                <li><a href="#" style="color:#4d4a4a;">FAQ’s</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Quick Shop</h2>
+            <h2 style="color:#2a2e4b;">Quick Shop</h2>
               <ul class="nav nav-pills nav-stacked">
                  <?php 
                       $mydb->setQuery("SELECT * FROM `tblcategory` LIMIT 6");
@@ -206,25 +205,24 @@ if (isset($_SESSION['gcCart'])){
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Policies</h2>
+            <h2 style="color:#2a2e4b;">Policies</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privecy Policy</a></li>
-                <li><a href="https://youtube.com/c/nowdemy">School Management System</a></li>
-                <li><a href="https://www.youtube.com/watch?v=9NelQ_HDTXo">Point of Sales</a></li>
-                <li><a href="https://www.youtube.com/watch?v=zzfSJYOe1FE">Bitcoin Mining System</a></li>
+              <li><a href="#" style="color:#4d4a4a;">Terms of Use</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Privacy Policy</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Customer Policy</a></li>
+               
               </ul>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>About Shopper</h2>
+            <h2 style="color:#2a2e4b;">About Shop</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Company Information</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Store Location</a></li>
-                <li><a href="#">Affillate Program</a></li>
-                <li><a href="#">Copyright</a></li>
+              <li><a href="#" style="color:#4d4a4a;">Company Information</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Careers</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Store Location</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Affillate Program</a></li>
+                <li><a href="#" style="color:#4d4a4a;">Copyright</a></li>
               </ul>
             </div>
           </div>
@@ -236,9 +234,9 @@ if (isset($_SESSION['gcCart'])){
     
     <div class="footer-bottom">
       <div class="container">
-        <div class="row">
-          <p class="pull-left">Modified by <span><a href="https://youtube.com/c/nowdemy">NOWDEMY</a></span></p>
-          <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+      <div class="row" style="display:flex; justify-content:center; color:#2a2e4b; ">
+        <p >Copyright &copy; under Lapcraft 2024</p>
+          
         </div>
       </div>
     </div>
