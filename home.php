@@ -93,7 +93,7 @@
                 <div class="single-products">
                     <div class="productinfo text-center">
                       <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
-                      <h2>Rs <?php  echo $result->PRODISPRICE; ?></h2>
+                      <h2 style="color:#892870">Rs <?php  echo $result->PRODISPRICE; ?></h2>
                       <p><?php  echo    $result->PRODESC; ?></p>
                       <button type="submit" name="btnorder" class="btn add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                     </div>
@@ -101,7 +101,7 @@
                       <div class="overlay-content">
                         <h3>Rs <?php  echo $result->PRODISPRICE; ?></h3>
                         <p><?php  echo    $result->PRODESC; ?></p>
-                       <button type="submit" name="btnorder" class="add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                       <button type="submit" name="btnorder" class="add-to-cart" ><i class="fa fa-shopping-cart"></i><span style="color:white;">Add to cart</span></button>
                       </div>
                     </div>
                 </div>
@@ -111,11 +111,11 @@
                               <?php     
                             if (isset($_SESSION['CUSID'])){  
 
-                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Add to wishlist" class="btn btn-danger"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                              echo ' <a href="'.web_root. 'customer/controller.php?action=addwish&proid='.$result->PROID.'" title="Add to wishlist" class="btn btn-danger"><i class="fa fa-plus-square" style="color:black"></i><span style="color:black; font-weight:bold;">Add to wishlist</span></a></a>
                             ';
 
                              }else{
-                               echo   '<a href="#" title="Add to wishlist" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i>Add to wishlist</a></a>
+                               echo   '<a href="#" title="Add to wishlist" class="proid"  data-target="#smyModal" data-toggle="modal" data-id="'.  $result->PROID.'"><i class="fa fa-plus-square"></i><span style="color:white;">Add to wishlist</span></a></a>
                             ';
                             }  
                             ?>
