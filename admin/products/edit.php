@@ -22,33 +22,11 @@
  
                 <div class="row"> 
 
-        <div class="form-group">
+       
+                <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERNAME">Owner:</label>
-
-                      <div class="col-md-8">
-                            <input class="form-control input-sm" id="OWNERNAME" name="OWNERNAME" placeholder=
-                            "Owner Name" type="text" value="<?php echo $singleproduct->OWNERNAME; ?>">
-                      </div>
-                    </div>
-                  </div>  
-
-                   <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "OWNERPHONE">Phone:</label>
-
-                      <div class="col-md-8">
-                             <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
-                            "+63 0000000000" type="number" value="<?php echo $singleproduct->OWNERPHONE; ?>">
-                      </div>
-                    </div>
-                  </div> 
-                     <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "PRODESC">Description:</label>
+                      "PRODESC">Product Details:</label>
 
                       <div class="col-md-8"> 
                         <input  id="PROID" name="PROID"   type="hidden" value="<?php echo $singleproduct->PROID; ?>">
@@ -58,6 +36,19 @@
                       </div>
                     </div>
                   </div>
+
+                   <!-- <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "OWNERPHONE">Phone:</label>
+
+                      <div class="col-md-8">
+                             <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
+                            "+977 0000000000" type="number" value="<?php echo $singleproduct->OWNERPHONE; ?>">
+                      </div>
+                    </div>
+                  </div>  -->
+                    
                  
 
                   <div class="form-group">

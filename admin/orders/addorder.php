@@ -32,7 +32,7 @@
                     echo '<td> <a href=""><img src="'.web_root.'admin/modules/product/'. $result->IMAGES.'" width="60" height="60" title="'.$result->PRODUCTNAME.'"/></a></td>';
                     echo '<td >' . $result->PRODUCTNAME.'</td>';
                     echo '<td align="center">'. $result->QTY.'</td>';
-                    echo '<td align="center"> &#8369 '. $result->PRICE.'</td>';
+                    echo '<td align="center"> Rs '. $result->PRICE.'</td>';
                     // echo '<td align="left">
                     // <a href="controller.php?action=cartadd&id='.$result->PRODUCTID.'&price='.$result->PRICE.'" class="btn btn_fixnmix btn-xs"><strong>Add to Cart</strong></a></td>';
                       echo '<td align="left">

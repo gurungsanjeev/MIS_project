@@ -15,40 +15,30 @@
           <!-- /.col-lg-12 -->
        </div> 
 
-              <div class="form-group">
+       <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OWNERNAME">Owner:</label>
-
-                      <div class="col-md-8">
-                            <input class="form-control input-sm" id="OWNERNAME" name="OWNERNAME" placeholder=
-                            "Owner Name" type="text" value="">
-                      </div>
-                    </div>
-                  </div>  
-
-                   <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "OWNERPHONE">Phone:</label>
-
-                      <div class="col-md-8">
-                             <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
-                            "+63 0000000000" type="number" value="">
-                      </div>
-                    </div>
-                  </div> 
-
-                 <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "PRODESC">Description:</label>
+                      "PRODESC">Product Details:</label>
 
                       <div class="col-md-8"> 
                       <textarea class="form-control input-sm" id="PRODESC" name="PRODESC" cols="1" rows="3" ></textarea>
                       </div>
                     </div>
                   </div>
+
+                   <!-- <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "OWNERPHONE">Phone:</label>
+
+                      <div class="col-md-8">
+                             <input class="form-control input-sm" id="OWNERPHONE" name="OWNERPHONE" placeholder=
+                            "+977 0000000000" type="number" value="">
+                      </div>
+                    </div>
+                  </div>  -->
+
+                
 
                   <div class="form-group">
                     <div class="col-md-8">
@@ -87,7 +77,7 @@
 
                       <div class="col-md-3">
                          <input class="form-control input-sm" id="PROPRICE"  step="any" name="PROPRICE" placeholder=
-                            "&#8369 Price " type="number" value="">
+                            "Rs Price " type="number" value="">
                       </div>
                     </div>
                   </div>

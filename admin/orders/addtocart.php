@@ -69,7 +69,7 @@ if(isset($_GET['id'])) { //remove to cart
                   <table  class="table fixnmix-table" id="table" >
                      <thead>
                        <tr>
-                          <th width="5px">#</th>
+                          <th width="5px">S.No</th>
                           <th>Product</th>
                           <th>Description</th>
                           <th>Price</th>
@@ -97,12 +97,12 @@ if(isset($_GET['id'])) { //remove to cart
                                       <td></td>
                                       <td><img src="<?php echo web_root.'admin/modules/product/'.$result->IMAGES; ?>" onload="totalprice()" width="50px" height="50px"></td>
                                       <td><?php echo $result->PRODUCTNAME ?></td>
-                                      <td>&#8369 <?php echo  $result->PRICE ?></td>
+                                      <td>Rs <?php echo  $result->PRICE ?></td>
                                       <td>
                                       <input type="NUMBER" data-id="<?php echo $result->PRODUCTID;  ?>" class="qty" name="QTY<?php echo $result->PRODUCTID;  ?>" id="QTY<?php echo $result->PRODUCTID; ?>"  value="<?php echo $_SESSION['fixnmix_cart'][$i]['qty'] ?>"/>
                                       </td>
                                         <td>
-                                        &#8369 <output id="Osubtot<?php echo $result->PRODUCTID ?>"><?php echo   $_SESSION['fixnmix_cart'][$i]['price']; ?></output>
+                                        Rs <output id="Osubtot<?php echo $result->PRODUCTID ?>"><?php echo   $_SESSION['fixnmix_cart'][$i]['price']; ?></output>
                                         </td>
                                       <!-- hidden textbox -->
                                       <input type="hidden" name="TOT<?php echo $result->PRODUCTID;  ?>" id="TOT<?php echo $result->PRODUCTID; ?>"  value="<?php echo $_SESSION['fixnmix_cart'][$i]['price'] ?>"/> 
@@ -123,7 +123,7 @@ if(isset($_GET['id'])) { //remove to cart
                 </div>
               <table>
            <tfoot  >
-                    <div ><strong><h1 align="right" >Total Price : &#8369 <span id="sum">0</span></h1></strong></td></div> 
+                    <div ><strong><h1 align="right" >Total Price : Rs <span id="sum">0</span></h1></strong></td></div> 
 
                               
                   </tfoot>

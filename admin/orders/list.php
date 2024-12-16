@@ -22,7 +22,7 @@
                   <table id="example" class="table  table-striped table-bordered table-hover"  style="font-size:12px" cellspacing="0">
 			 		<thead>
 			 		<tr >
-				  		<th>#</th>
+				  		<th>s.No</th>
 				  		<th>Order#</th>
 				  		<th>Customer</th>
 				  		<th>DateOrdered</th>	 
@@ -49,7 +49,7 @@
 				  		echo '<td><a href="#" title="View list Of ordered" data-target="#myModal" data-toggle="modal" class="orders" data-id="'.$result->ORDEREDNUM.'">'.$result->ORDEREDNUM .'</a> </td>';  
 				  		echo '<td><a href="index.php?view=customerdetails&customerid='.$result->CUSTOMERID.'" title="View customer information">'. $result->FNAME.' '. $result->LNAME.'</a></td>';
 				  		echo '<td>'. date_format(date_create($result->ORDEREDDATE),"M/d/Y h:i:s").'</td>';
-				  		echo '<td> &#8369 '.number_format($result->PAYMENT ,2).'</td>';
+				  		echo '<td> Rs '.number_format($result->PAYMENT ,2).'</td>';
 				  		echo '<td >'.$result->PAYMENTMETHOD .'</td>';
 				  		// echo '<td></td>';
 				  		echo '<td >'. $result->ORDEREDSTATS.'</td>';
@@ -67,18 +67,18 @@
 				  		// if($result->ORDEREDSTATS=='Pending'){
 				  		// 		echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
 				  		// 		<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-primary btn-xs">Confirm</a></td>';
-			  	 	// 	}elseif($result->ORDEREDSTATS=='Confirmed'){
-				  	 // 			echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
+			  	 		// }elseif($result->ORDEREDSTATS=='Confirmed'){
+				  	 	// 		echo '<td><a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=cancel" class="btn btn-danger btn-xs">Cancel</a>
 				  		// 		<a href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=deliver"  class="btn btn-success btn-xs">Deliver</a></td>';
 				  	 		
-			  	 	// 	}elseif($result->ORDEREDSTATS=='Delivered'){
-			  	 	// 		  echo '<td> <a  href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-success btn-xs" disabled>Delivered</a></td>';
+			  	 		// }elseif($result->ORDEREDSTATS=='Delivered'){
+			  	 		// 	  echo '<td> <a  href="controller.php?action=edit&id='.$result->ORDEREDNUM.'&actions=confirm"  class="btn btn-success btn-xs" disabled>Delivered</a></td>';
 				
-			  	 	// 	}else{
-			  	 	// 		 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelled</a></td>';
+			  	 		// }else{
+			  	 		// 	 echo '<td> <a  href="#"  class="btn btn-danger btn-xs" disabled>Cancelled</a></td>';
 				
 			
-			  	 	// 	} 
+			  	 		// } 
 				  		echo '</tr>';
  
 				  	} 

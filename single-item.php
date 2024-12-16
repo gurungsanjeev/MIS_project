@@ -41,11 +41,11 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                 <ul>
                     <!-- <li>Model - <?php echo $result->PROMODEL; ?></li> -->
                     <li>Type - <?php echo $result->PRODESC; ?></li>
-                    <li>Price - &#8369 <?php echo $result->PROPRICE; ?></li>
+                    <li>Price - Rs <?php echo $result->PROPRICE; ?></li>
                     <?php if($result->PRODISCOUNT>0){ ?>
                     <li>Discount - <?php echo $result->PRODISCOUNT; ?> % </li> 
 
-                    <li>Discounted Price - &#8369 <?php echo $result->PRODISPRICE; ?> </li> 
+                    <li>Discounted Price - Rs <?php echo $result->PRODISPRICE; ?> </li> 
                     <?php } ?>
                     <li>Available Quantity - <?php echo $result->PROQTY; ?></li>
                 </ul>

@@ -181,10 +181,10 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 				  		// echo '<td>'. $result->FIRSTNAME.' '. $result->LASTNAME.'</td>';
 				  		echo '<td>'. $result->PRODESC.'</td>';
 				  		// echo '<td>'.date_format(date_create($result->ORDEREDDATE),"M/d/Y h:i:s").'</td>';
-				  		echo '<td> &#8369 '. number_format($result->PROPRICE,2).' </td>';
+				  		echo '<td> Rs '. number_format($result->PROPRICE,2).' </td>';
 				  		echo '<td align="center" >'. $result->ORDEREDQTY.'</td>';
 				  		?>
-				  		 <td> &#8369 <output><?php echo  number_format($result->ORDEREDPRICE,2); ?></output></td> 
+				  		 <td> Rs <output><?php echo  number_format($result->ORDEREDPRICE,2); ?></output></td> 
 				  		<?php
 				  		
 				  		// echo '<td id="status" >'. $result->STATS.'</td>';
@@ -225,9 +225,9 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 
 		  	</div>
 		  	<div class="col-md-6 pull-right">
-		  		<p align="right">Total Price : &#8369 <?php echo number_format($subtot,2);?></p>
-		  		<p align="right">Delivery Fee : &#8369 <?php echo number_format($price,2); ?></p>
-		  		<p align="right">Overall Price : &#8369 <?php echo number_format($cur->PAYMENT,2); ?></p>
+		  		<p align="right">Total Price : Rs <?php echo number_format($subtot,2);?></p>
+		  		<p align="right">Delivery Fee : Rs <?php echo number_format($price,2); ?></p>
+		  		<p align="right">Overall Price : Rs <?php echo number_format($cur->PAYMENT,2); ?></p>
 		  	</div>
 		  </div>
 		 

@@ -69,9 +69,7 @@
                             </form>
 
                        </div>
-                        <div class="panel-footer">
-                             <p align="left">&copy; <a href="https://youtube.com/c/nowdemy">NOWDEMY Source Code</a></p>
-                        </div>
+                        
                     </div> 
                   </div>
                   <!-- end login panel -->
@@ -128,11 +126,11 @@
                                        <div class="form-group">
                                             <div class="col-md-10">
                                               <label class="col-md-4 control-label" for=
-                                              "CITYADD">Municipality/City:</label>
+                                              "CITYADD">City:</label>
 
                                               <div class="col-md-8">
                                                  <input class="form-control input-sm" id="CITYADD" name="CITYADD" placeholder=
-                                                    "Municipality/City Address" type="text" value="">
+                                                    "City Address" type="text" value="">
                                               </div>
                                             </div>
                                           </div>
@@ -181,7 +179,7 @@
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
-                                                "+63 0000000000" type="number" value="">
+                                                "+97 0000000000" type="number" value="">
                                           </div>
                                         </div>
                                       </div>
@@ -193,8 +191,8 @@
                                            <label class="col-md-4" align = "right"for=
                                           "image"></label>
                                           <div class="col-md-8">
-                                        <p>  I <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" />
-                                           <small>Agree with the <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> of NOWDEMY Source Code.</small>
+                                        <p> <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" /> I 
+                                           <small>Agree with the <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> </small>
                                            
                                           </div>
                                         </div>
@@ -215,9 +213,7 @@
                                         
 
                                      </div>
-                                    <div class="panel-footer">
-                                        <p align="left">&copy; <a href="https://youtube.com/c/nowdemy">NOWDEMY Source Code</a></p>
-                                    </div> 
+                                  
                             </div> 
                             <!-- end panel sign up -->
                         </form>  

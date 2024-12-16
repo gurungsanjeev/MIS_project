@@ -39,11 +39,11 @@
              <div class="form-group">
               <div class="col-md-12">
                 <label class="col-md-4 control-label" for=
-                "CITYADD">Municipality/City:</label>
+                "CITYADD">City:</label>
 
                 <div class="col-md-8">
                    <input class="form-control input-sm" id="CITYADD" name="CITYADD" placeholder=
-                      "Municipality/City Address" type="text" value="<?php echo $res->CITYADD; ?>">
+                      "City Address" type="text" value="<?php echo $res->CITYADD; ?>">
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@
                 <div class="form-group">
                 <div class="col-md-12">
                   <label class="col-md-4 control-label" for=
-                  "PHONE">Contact#:</label>
+                  "PHONE">Contact:</label>
 
                   <div class="col-md-8">
                      <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=

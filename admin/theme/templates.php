@@ -68,7 +68,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand"  href="<?php echo web_root; ?>admin/index.php" >NOWDEMY E-Commerce</a>
+                 <a class="navbar-brand"  href="<?php echo web_root; ?>admin/index.php" >LapCraft</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -100,7 +100,7 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Howdy, <?php echo $_SESSION['U_NAME']; ?> <img title="profile image" width="23px" height="17px" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
+                        Profile  <img title="profile image" width="23px" height="17px" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
                             
                     </a>
                     <ul class="dropdown-menu dropdown-acnt">
@@ -154,10 +154,7 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                         <?php if ($_SESSION['U_ROLE']=='Administrator') {
                             # code...
                         ?>
-                         <li>
-                             <a href="<?php echo web_root; ?>admin/settings/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Setting </a>
-            
-                        </li>
+                       
                        <!--   <li>
                              <a href="<?php echo web_root; ?>admin/autonumber/index.php" ><i class="fa fa-list-alt fa-fw"></i>  Autonumber </a>
             
@@ -166,10 +163,7 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                             <a href="<?php echo web_root; ?>admin/user/index.php" ><i class="fa fa-user fa-fw"></i> Users </a>
                           
                         </li>
-                         <li>
-                            <a href="<?php echo web_root; ?>admin/report/index.php" ><i class="fa  fa-file-text fa-fw"></i> Report </a>
-                          
-                        </li>
+                        
                  <?php }  ?>
  
  
@@ -399,5 +393,5 @@ $('#date_picker').datetimepicker({
   
   
 </body> 
-      <footer><p  style="text-align: center;font-weight: bold;">Copyright &copy; Bachelor of Science and Entrepreneurs </p></footer>
+      <footer><p  style="text-align: center;font-weight: bold;">Copyright &copy; LapCraft </p></footer>
 </html>

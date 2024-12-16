@@ -12,39 +12,38 @@
             <div class="carousel-inner" style="background:#ffceff !important;">
               <div class="item active">
                 <div class="col-sm-6">
-                  <h1><span>Smart</span>-SHOP</h1>
-                  <h2>Free E-Commerce Template</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                 
+                <h1><span>Acer</span></h1>
+                <h2>Innovation Unleashed, Power in Every Click.</h2>
+                  <p>Get your power now
+ </p>
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png"  class="pricing" alt="" />
+                <img src="images/home/acer.png" class="girl img-responsive" alt="" />
+                 
                 </div>
               </div>
               <div class="item">
                 <div class="col-sm-6">
-                <h1><span>Smart</span>-SHOP</h1>
-                  <h2>100% Responsive Design</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                 
+                <h1><span>MacBook</span></h1>
+                  <h2>Elegance in Design, Excellence in Performance.</h2>
+                  <p>Get your Macbook now!</p>
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png"  class="pricing" alt="" />
+                <img src="images/home/macbook.jpg" class="girl img-responsive" alt="" height="300px"/>
+                 
                 </div>
               </div>
               
               <div class="item">
                 <div class="col-sm-6">
-                <h1><span>Smart</span>-SHOP</h1>
-                  <h2>Free Ecommerce Template</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                 
+                <h1><span>SAMSUNG</span></h1>
+                  <h2>Power Meets Precision, Redefine Productivity.</h2>
+                  <p>Buy the best laptop for your work!!!
+</p>
                 </div>
                 <div class="col-sm-6">
-                  <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                  <img src="images/home/pricing.png" class="pricing" alt="" />
+                <img src="images/home/img1.png" class=" img-responsive" alt="" />
+                
                 </div>
               </div>
               
@@ -94,13 +93,13 @@
                 <div class="single-products">
                     <div class="productinfo text-center">
                       <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
-                      <h2>&#8369 <?php  echo $result->PRODISPRICE; ?></h2>
+                      <h2>Rs <?php  echo $result->PRODISPRICE; ?></h2>
                       <p><?php  echo    $result->PRODESC; ?></p>
                       <button type="submit" name="btnorder" class="btn add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                     </div>
                     <div class="product-overlay" >
                       <div class="overlay-content">
-                        <h3>&#8369 <?php  echo $result->PRODISPRICE; ?></h3>
+                        <h3>Rs <?php  echo $result->PRODISPRICE; ?></h3>
                         <p><?php  echo    $result->PRODESC; ?></p>
                        <button type="submit" name="btnorder" class="add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                       </div>
@@ -155,7 +154,7 @@
                       <div class="single-products">
                         <div class="productinfo text-center">
                           <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
-                          <h2>&#8369 <?php  echo $result->PRODISPRICE; ?></h2>
+                          <h2>Rs <?php  echo $result->PRODISPRICE; ?></h2>
                           <p><?php  echo    $result->PRODESC; ?></p>
                            <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                         </div>
@@ -185,7 +184,7 @@
                       <div class="single-products">
                         <div class="productinfo text-center">
                           <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
-                          <h2>&#8369 <?php  echo $result->PRODISPRICE; ?></h2>
+                          <h2>Rs <?php  echo $result->PRODISPRICE; ?></h2>
                           <p><?php  echo    $result->PRODESC; ?></p>
                            <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                         </div>

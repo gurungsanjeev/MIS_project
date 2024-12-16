@@ -12,9 +12,9 @@
             <fieldset>  
            
   <span id="printout">
-  <h3 align="center">Fix and Mix Bakeshop</h3>
-      <h4 align="center">Block 5 AR Zayco Subdivision<br/>
-      Kabankalan City<br/>
+  <h3 align="center"></h3>
+      <h4 align="center">LapCraft<br/>
+      <br/>
       </h4>
 
               <legend><h2 class="text-left">Billing Details</h2></legend>
@@ -81,8 +81,8 @@
                           <!-- <td><img src="<?php echo web_root.'admin/modules/product/'.$result->IMAGES; ?>" onload="totalprice()" width="50px" height="50px"></td> -->
                           <td><?php echo $result->PRODUCTNAME ?></td>
                           <td><?php echo $_SESSION['fixnmix_cart'][$i]['qty'] ?></td>
-                          <td>&#8369 <?php echo  $result->PRICE ?></td>
-                          <td>&#8369 <output><?php echo $_SESSION['fixnmix_cart'][$i]['price']?></output></td>
+                          <td>Rs <?php echo  $result->PRICE ?></td>
+                          <td>Rs <output><?php echo $_SESSION['fixnmix_cart'][$i]['price']?></output></td>
                         </tr>
               <?php
                         }
@@ -117,9 +117,9 @@
 
                 </div> -->
                 <div class="col-md-4 pull-right">
-                  <!-- <div>Total Price : &#8369 <?php echo number_format($tot,2);?></div> -->
-                  <!-- <div>Delivery Fee : &#8369 <?php echo number_format($price,2); ?></div> -->
-                  <div>Overall Price : &#8369 <?php echo number_format($cur->TOTALPRICE,2); ?></div>
+                  <!-- <div>Total Price : Rs <?php echo number_format($tot,2);?></div> -->
+                  <!-- <div>Delivery Fee : Rs <?php echo number_format($price,2); ?></div> -->
+                  <div>Overall Price : Rs <?php echo number_format($cur->TOTALPRICE,2); ?></div>
                 </div>
               </div>
               <div class="row" style="margin-left:2%"> 

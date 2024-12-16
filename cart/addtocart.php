@@ -65,7 +65,7 @@ if (isset($_POST['updateid'])){
           <div class="panel-body">  
             <fieldset>  
               <legend><h2 class="text-left">Cart List</h2></legend>
-          <div>Every products has a mininum price of &#8369 50.00 each to be able to order.</div>
+          <div>Every products has a mininum price of Rs 50.00 each to be able to order.</div>
       <div class="table-responsive">
        <div  class="fixnmix_scroll_carttwo" >
           <table  class="table fixnmix-table" id="table" >
@@ -101,9 +101,9 @@ if (isset($_POST['updateid'])){
                         <td></td>
                         <td><img src="<?php echo web_root.'admin/modules/product/'.$result->IMAGES; ?>"   width="50px" height="50px"></td>
                         <td><?php echo $result->PRODUCTNAME ?></td>
-                        <td>&#8369 <?php echo number_format($result->PRICE,2) ?></td>
+                        <td>Rs <?php echo number_format($result->PRICE,2) ?></td>
                         <td><input type="NUMBER" data-id="<?php echo $result->PRODUCTID;  ?>" class="cusqty" name="QTY<?php echo $result->PRODUCTID;  ?>" id="QTY<?php echo $result->PRODUCTID; ?>"  value="<?php echo $_SESSION['fixnmix_cart'][$i]['qty'] ?>"/>
-                        <td>&#8369 <output id="Osubtot<?php echo $result->PRODUCTID ?>"><?php echo   $_SESSION['fixnmix_cart'][$i]['price'] ; ?></output>
+                        <td>Rs <output id="Osubtot<?php echo $result->PRODUCTID ?>"><?php echo   $_SESSION['fixnmix_cart'][$i]['price'] ; ?></output>
 
                         <!-- hidden textbox -->
                         <input type="hidden" name="TOT<?php echo $result->PRODUCTID;  ?>" id="TOT<?php echo $result->PRODUCTID; ?>"  value="<?php echo $_SESSION['fixnmix_cart'][$i]['price'] ?>"/></td>
@@ -128,7 +128,7 @@ if (isset($_POST['updateid'])){
                   </div>
                   <table  >
                   <tfoot >
-                     <strong><h1 align="right">Total Price : &#8369 <span style="margin-right:3%"  id="sum">0.00</span></h1></strong></td>
+                     <strong><h1 align="right">Total Price : Rs <span style="margin-right:3%"  id="sum">0.00</span></h1></strong></td>
          
                   </tfoot>
                   </table> 
