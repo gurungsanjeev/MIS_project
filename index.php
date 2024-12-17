@@ -4,6 +4,7 @@ require_once ("include/initialize.php");
 // 	redirect(web_root.'index.php');
 // }
 $content='home.php';
+// $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 
 switch ($view) {
@@ -38,6 +39,24 @@ switch ($view) {
 	}
 	
 		break;
+
+		case 'paymentReturn' :  
+			If(!isset($_SESSION['orderdetails'])){
+			$_SESSION['orderdetails'] = "Order Details";
+ } 
+ $content='customer/paymentReturn.php';	
+// if( isset($_SESSION['orderdetails'])){
+ //   if (@count($_SESSION['orderdetails'])>0){
+ //     	$title = 'Cart List' . '| <a href="">Order Details</a>';
+// 	      }
+// 	    } 
+if (isset($_SESSION['orderdetails']) && is_array($_SESSION['orderdetails']) && count($_SESSION['orderdetails']) > 0){
+ $title = 'Cart List' . '| <a href="">Order Details</a>';
+}
+
+ break;
+
+ 
 	case 'billing' : 	
 	 If(!isset($_SESSION['billingdetails'])){
          $_SESSION['billingdetails'] = "Order Details";

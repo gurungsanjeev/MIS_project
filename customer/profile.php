@@ -82,14 +82,14 @@
                                 id="example" style="font-size:12px">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Order#</th>
+                                            <th>S.No</th>
+                                            <th>Order</th>
                                             <th>Date Oredered</th>
                                             <th>TotalPrice</th>
                                             <th>PaymentMethod</th>
                                             <th>Status</th>
                                             <th width="150px">Remarks</th>
-                                            <th></th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -121,11 +121,11 @@
                                             <?php echo  $result->ORDEREDSTATS; ?></td>
                                             <td>
                                             <?php echo  $result->ORDEREDREMARKS; ?></td>
-                                            <td class="tooltip-demo">
+                                            <!-- <td class="tooltip-demo">
                                                 <a class=
                                                 "orderid btn btn-pup btn-xs"
                                                 data-id=
-                                                "<?php echo $result->ORDEREDNUM; ?>"
+                                                
                                                 data-target="#myOrdered"
                                                 data-toggle="modal" href="#"
                                                 title=
@@ -137,7 +137,7 @@
                                                 "View Order"></i> <span class=
                                                 "tooltip tooltip.top">view</span></a>
                                             
-                                            </td>
+                                            </td> -->
                                         </tr><?php
                                                                        
                                                                         } 

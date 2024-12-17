@@ -207,7 +207,7 @@ if (isset($_POST['updateid'])){
                               </div>
                               </div>
                               <div class="modal-footer">
-                              <p align="left">&copy; Fix N Mix Ordering System</p>
+                              <p align="left">&copy; LapCraft</p>
                               <button class="btn btn-default"   data-dismiss="modal" type=
                               "button">Close</button>  
                               <button class="btn btn_fixnmix"

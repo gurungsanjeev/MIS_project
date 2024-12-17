@@ -115,9 +115,8 @@ $singlecustomer = $customer->single_customer($customerid);
  <section id="do_action">
     <div class="container">
       <div class="heading">
-        <h3>What would you like to do next?</h3>
-        <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
-      </div>
+       
+       
       <div class="row">
          <div class="row">
                    <div class="col-md-7">
@@ -125,34 +124,118 @@ $singlecustomer = $customer->single_customer($customerid);
                   <label> Payment Method : </label> 
                   <div class="radio" >
                       <label >
-                          <input type="radio"  class="paymethod" name="paymethod" id="deliveryfee" value="Cash on Delivery" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" >Cash on Delivery 
+                          <input type="radio"   class="paymethod" name="paymethod" id="deliveryfee" value="Sewa-Online" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" unchecked> E-pay
+                          
+                          
                         
                       </label>
+
                   </div> 
+
+
+<!-- this is the epayment integration method -->
+
+</form>
+				   	<div>
+                  <?php
+                  $transaction_id = substr(bin2hex(random_bytes(4)), 0, 8);
+                  $message ="total_amount=$tot,transaction_uuid=$transaction_id,product_code=EPAYTEST";
+                $s = hash_hmac('sha256', $message, '8gBm/:&EnhH.1/q', true);
+                $signature =  base64_encode($s); ?>
+                
+                
+                <body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4;">
+  <!-- Wrapper -->
+  <div style="max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <!-- Header -->
+    <h2 style="text-align: center; color: #333;">eSewa Payment Information</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 20px; font-size: 14px;">Please verify your payment details before submission.</p>
+
+    <!-- Payment Details -->
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Amount:</span>
+      <span style="color: #333;"><?php echo $tot;?></span>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Tax Amount:</span>
+      <span style="color: #333;">0</span>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Total Amount:</span>
+      <span style="color: #333;"><?php echo $tot;?></span>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Transaction UUID:</span>
+      <span style="color: #333;">241028</span>
+    </div>
+    <!-- <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Product Code:</span>
+      <span style="color: #333;">EPAYTEST</span>
+    </div> -->
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Product Service Charge:</span>
+      <span style="color: #333;">0</span>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: bold; color: #555;">Product Delivery Charge:</span>
+      <span style="color: #333;">0</span>
+    </div>
+    
+    
+
+    <!-- eSewa Submit Form -->
+    <form action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST">
+      <input type="text" id="amount" name="amount" value="<?php echo $tot ?>" required>
+                    <input type="hidden" id="tax_amount" name="tax_amount" value ="0" required>
+                    <input type="none" id="total_amount" name="total_amount" value="<?php echo $tot; ?>" style="display: none;" readonly required>
+                    <input type="hidden" id="transaction_uuid" name="transaction_uuid" value="<?php echo $transaction_id ?>" required>
+                    <input type="hidden" id="product_code" name="product_code" value ="EPAYTEST" required>
+                    <input type="hidden" id="product_service_charge" name="product_service_charge" value="0" required>
+                    <input type="hidden" id="product_delivery_charge" name="product_delivery_charge" value="0" required>
+                    <input type="hidden" id="success_url" name="success_url" value="http://localhost/ecommerce/index.php?q=paymentReturn" required>
+                    <input type="hidden" id="failure_url" name="failure_url" value="https://google.com" required>
+                    <input type="hidden" id="signed_field_names" name="signed_field_names" value="total_amount,transaction_uuid,product_code" required>
+                    <input type="hidden" id="signature" name="signature" value="<?php echo $signature ?>" required>
+
+      <!-- Submit Button -->
+      <button type="submit" style="display: block; width: 100%; padding: 12px; border: none; background-color: #28a745; color: white; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; text-align: center;">
+        Process Payment
+      </button>
+    </form>
+  </div>
+</body>
+ 
+              </div>
+								
+
+
+
+
+
               </div> 
                         <div class="panel"> 
                                 <div class="panel-body">
                                     <div class="form-group ">
-                                      <label>Address where to deliver</label>
+                                     
 
                                     
                                         <div class="col-md-12">
-                                          <label class="col-md-4 control-label" for=
-                                          "PLACE">Place(Brgy/City):</label>
+                                          <!-- <label class="col-md-4 control-label" for=
+                                          "PLACE">Place(City):</label> -->
 
-                                          <div class="col-md-8">
-                                           <select class="form-control paymethod" name="PLACE" id="PLACE" onchange="validatedate()"> 
-                                           <option value="0" >Select</option>
+                                          <!-- <div class="col-md-8"> -->
+                                           <!-- <select class="form-control paymethod" name="PLACE" id="PLACE" onchange="validatedate()">  -->
+                                           <!-- <option value="0" >Select</option> -->
                                               <?php 
-                                            $query = "SELECT * FROM `tblsetting` ";
-                                            $mydb->setQuery($query);
-                                            $cur = $mydb->loadResultList();
+                                            // $query = "SELECT * FROM `tblsetting` ";
+                                            // $mydb->setQuery($query);
+                                            // $cur = $mydb->loadResultList();
 
-                                            foreach ($cur as $result) {  
-                                              echo '<option value='.$result->DELPRICE.'>'.$result->BRGY.' '.$result->PLACE.' </option>';
-                                            }
-                                            ?>
-                                          </select>
+                                            // foreach ($cur as $result) {  
+                                            //   echo '<option value='.$result->DELPRICE.'>'.$result->BRGY.' '.$result->PLACE.' </option>';
+                                            // }
+                                            // ?>
+                                          <!-- </select> -->
                                           </div>
                                         </div>  
                                       
@@ -181,4 +264,3 @@ $singlecustomer = $customer->single_customer($customerid);
       </div>
     </div>
   </section><!--/#do_action-->
-</form>

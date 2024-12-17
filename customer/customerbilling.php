@@ -19,7 +19,7 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
         <img src="<?php echo web_root; ?>images/bg2.jpg"  height="90px" style="-webkit-border-radius:5px; -moz-border-radius:5px;" alt="Image">
             </td>
         <td width="87%" align="center">
-        <h3 >Bachelor of Science and Entrepreneurs</h3> 
+        <h3 >LapCraft</h3> 
         </td>
       </tr>
     </table>
@@ -89,7 +89,7 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
        </table> <hr/>
     <div class="row">
         <div class="col-md-6 pull-left">
-         <div>Ordered Date : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
+         <div>Ordered Datesss : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
           <div>Payment Method : <?php echo $cur->PAYMENTMETHOD; ?></div>
 
         </div>
