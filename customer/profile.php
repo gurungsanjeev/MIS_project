@@ -84,10 +84,10 @@
                                         <tr>
                                             <th>S.No</th>
                                             <th>Order</th>
-                                            <th>Date Oredered</th>
+                                            <th>Date Ordered</th>
                                             <th>TotalPrice</th>
                                             <th>PaymentMethod</th>
-                                            <th>Status</th>
+                                            <!-- <th>Status</th> -->
                                             <th width="150px">Remarks</th>
                                            
                                         </tr>
@@ -117,8 +117,6 @@
                                             <?php echo  $result->PAYMENT; ?></td>
                                             <td>
                                             <?php echo  $result->PAYMENTMETHOD; ?></td>
-                                            <td>
-                                            <?php echo  $result->ORDEREDSTATS; ?></td>
                                             <td>
                                             <?php echo  $result->ORDEREDREMARKS; ?></td>
                                             <!-- <td class="tooltip-demo">
