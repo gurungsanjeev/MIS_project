@@ -123,14 +123,15 @@ $singlecustomer = $customer->single_customer($customerid);
               <div class="form-group">
                   <label> Payment Method : </label> 
                   <div class="radio" >
-                      <label >
-                          <input type="radio"   class="paymethod" name="paymethod" id="deliveryfee" value="Sewa-Online" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" unchecked> E-pay
+                      
+                          <input type="radio"   class="paymethod" name="paymethod" id="deliveryfee" value="Cash on delivery" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" unchecked> cash on delivery
                           
                           
                         
-                      </label>
+                      
 
                   </div> 
+                  <label for="">or</label>
 
 
 <!-- this is the epayment integration method -->
