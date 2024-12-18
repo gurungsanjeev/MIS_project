@@ -87,9 +87,9 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button class="close" data-dismiss="modal" type=
-                                    "button">ï¿½</button>
+                                    "button">X</button>
 
-                                    <h4 class="modal-title" id="myModalLabel">Image.</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Change Image</h4>
                                 </div>
 
                                 <form action="<?php echo web_root; ?>admin/products/controller.php?action=photos" enctype="multipart/form-data" method=

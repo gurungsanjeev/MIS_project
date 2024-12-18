@@ -132,6 +132,18 @@ $singlecustomer = $customer->single_customer($customerid);
 
  
   <div>
+
+
+  <label> Payment Method : </label> 
+                  <div class="radio" >
+                      <label >
+                          <input type="radio"   class="paymethod" name="paymethod" id="deliveryfee" value="Sewa-Online" checked="true" data-toggle="collapse"  data-parent="#accordion" data-target="#collapseOne" unchecked> E-pay
+                          
+                          
+                        
+                      </label>
+
+
   <div style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center;">
 
 <!-- Main Container -->
@@ -169,6 +181,69 @@ $singlecustomer = $customer->single_customer($customerid);
         margin-top: 20px;">
         Back to Home
     </a>
+   
+
+
+
+
+    <div class="panel"> 
+                                <div class="panel-body">
+                                    <div class="form-group ">
+                                     
+
+                                    
+                                        <div class="col-md-12">
+                                          <!-- <label class="col-md-4 control-label" for=
+                                          "PLACE">Place(City):</label> -->
+
+                                          <!-- <div class="col-md-8"> -->
+                                           <!-- <select class="form-control paymethod" name="PLACE" id="PLACE" onchange="validatedate()">  -->
+                                           <!-- <option value="0" >Select</option> -->
+                                              <?php 
+                                            // $query = "SELECT * FROM `tblsetting` ";
+                                            // $mydb->setQuery($query);
+                                            // $cur = $mydb->loadResultList();
+
+                                            // foreach ($cur as $result) {  
+                                            //   echo '<option value='.$result->DELPRICE.'>'.$result->BRGY.' '.$result->PLACE.' </option>';
+                                            // }
+                                            // ?>
+                                          <!-- </select> -->
+                                          </div>
+                                        </div>  
+                                      
+                                    </div>
+    
+                                </div>
+                            </div> 
+      
+                        <input type="hidden"  placeholder="HH-MM-AM/PM"  id="CLAIMEDDATE" name="CLAIMEDDATE" value="<?php echo date('y-m-d h:i:s') ?>"  class="form-control"/>
+
+                   </div>  
+    
+             
+         
+              </div>
+<br/>
+
+
+              <div class="row">
+                <div class="col-md-6">
+
+                   </div>
+                  <div class="col-md-6">
+                      <button type="submit" class="btn btn-pup  pull-right " name="btn" id="btn" onclick="return validatedate();"   /> See Your Order History <span class="glyphicon glyphicon-chevron-right"></span></button> 
+                </div>  
+              </div>
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -194,82 +269,7 @@ $singlecustomer = $customer->single_customer($customerid);
 
   </form>
 
-  <div class="table-responsive" style="margin-top:5%;">
-    <h1 style="
-    justify-content: center;
-    display: flex; color:#560361;
-">Order History</h1>
-                            <form action=
-                            "customer/controller.php?action=delete" method=
-                            "post">
-                                <table cellspacing="0" class=
-                                "table table-striped table-bordered table-hover"
-                                id="example" style="font-size:12px">
-                                    <thead>
-                                        <tr>
-                                            <th>S.No</th>
-                                            <th>Order#</th>
-                                            <th>Date Oredered</th>
-                                            <th>TotalPrice</th>
-                                            <th>PaymentMethod</th>
-                                            <th>Status</th>
-                                            <th width="150px">Remarks</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php 
-                                                                    $query = "SELECT * FROM `tblsummary`  
-                                                                  WHERE  `CUSTOMERID`=".$_SESSION['CUSID'] ." ORDER BY   `ORDEREDNUM` desc ";
-                                                                  $mydb->setQuery($query);
-                                                                  $cur = $mydb->loadResultList();
-
-                                                                foreach ($cur as $result) {
-                                                                  ?>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <!--   <td width="10%"  class="orderid   "  data-target="#myOrdered" data-toggle="modal" data-id="<?php echo  $result->ORDEREDNUM; ?>">
-                            <a href="#"  title="View list Of ordered products"  class="orderid   "  data-target="#myOrdered" data-toggle="modal" data-id="<?php echo  $result->ORDEREDNUM; ?>"><i class="fa fa-info-circle fa-fw"></i> view orders</a> 
-                         </td> -->
-                                            <!-- <td> <a href="#" class="get-id"  data-target="#myModal" data-toggle="modal" data-id="<?php echo  $result->ORDERNUMBER; ?>"><?php echo  $result->ORDERNUMBER; ?></a>
-                               </td> -->
-                                            <td>
-                                            <?php echo  $result->ORDEREDNUM; ?>
-                                            <!-- <a href="#"  title="View list Of ordered products"  class="orderid   "  data-target="#myOrdered" data-toggle="modal" data-id="<?php echo  $result->ORDEREDNUM; ?>"><i class="fa fa-info-circle fa-fw"></i><?php echo  $result->ORDEREDNUM; ?></a> --></td>
-                                            <td>
-                                            <?php echo date_format(date_create($result->ORDEREDDATE),"M/d/Y h:i:s") ; ?></td>
-                                            <td>Rs
-                                            <?php echo  $result->PAYMENT; ?></td>
-                                            <td>
-                                            <?php echo  $result->PAYMENTMETHOD; ?></td>
-                                            <td>
-                                            <?php echo  $result->ORDEREDSTATS; ?></td>
-                                            <td>
-                                            <?php echo  $result->ORDEREDREMARKS; ?></td>
-                                            <!-- <td class="tooltip-demo">
-                                                <a class=
-                                                "orderid btn btn-pup btn-xs"
-                                                data-id=
-                                                "<?php echo $result->ORDEREDNUM; ?>"
-                                                data-target="#myOrdered"
-                                                data-toggle="modal" href="#"
-                                                title=
-                                                "View list Of ordered products">
-                                                <i class=
-                                                "fa fa-info-circle fa-fw"
-                                                data-placement="left"
-                                                data-toggle="tooltip" title=
-                                                "View Order"></i> <span class=
-                                                "tooltip tooltip.top">view</span></a>
-                                            
-                                            </td> -->
-                                        </tr><?php
-                                                                       
-                                                                        } 
-                                                                        ?>
-                                    </tbody>
-                                </table>
-                            </form> 
+  
 
   <script>
     // Trigger button click on page load

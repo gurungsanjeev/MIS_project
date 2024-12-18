@@ -198,7 +198,7 @@ $singlecustomer = $customer->single_customer($customerid);
                     <input type="hidden" id="signature" name="signature" value="<?php echo $signature ?>" required>
 
       <!-- Submit Button -->
-      <button type="submit" style="display: block; width: 100%; padding: 12px; border: none; background-color: #28a745; color: white; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; text-align: center;">
+      <button type="submit" onclick="return validatedate();" style="display: block; width: 100%; padding: 12px; border: none; background-color: #28a745; color: white; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; text-align: center;">
         Process Payment
       </button>
     </form>

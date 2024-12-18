@@ -98,16 +98,16 @@ $singleuser = $user->single_user($_SESSION['USERID']);
 
 ?> 
                 <!-- /.dropdown -->
-                <li class="dropdown">
+                <li class="dropdown" >
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Profile  <img title="profile image" width="23px" height="17px" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
+                          <img title="profile image" width="23px" height="17px" src="">  
                             
                     </a>
                     <ul class="dropdown-menu dropdown-acnt">
 
                           <div class="divpic"> 
                             <a href="" data-target="#usermodal"  data-toggle="modal" > 
-                                <img title="profile image" width="70" height="80" src="<?php echo web_root.'admin/user/'.$singleuser ->USERIMAGE ?>">  
+                                <img title="profile image" width="70" height="80" src="">  
                             </a>
                           </div> 
                     
